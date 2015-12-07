@@ -46,10 +46,10 @@ public class SessionRegJmsReceiver {
                 Message message = messConsumer.receive();
                 if (message instanceof ObjectMessage) {
                     Object obj = ((ObjectMessage) message).getObject();
-                    Client client = (Client) obj;
+                    //Client client = (Client) obj;
                     System.out.println("<--- Notification received : ");
                     System.out.println("<--- Notification ID : " + ((ObjectMessage) message).getJMSMessageID());
-                    System.out.println("<--- Notification Message : " + client.toString());
+                    System.out.println("<--- Notification Message : " + obj.toString());
 
                 }
                 if (message instanceof TextMessage) {
