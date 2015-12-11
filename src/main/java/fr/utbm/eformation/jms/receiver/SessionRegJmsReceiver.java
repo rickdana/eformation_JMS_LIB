@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fr.utbm.eformation.jms.receiver;
 
-import fr.utbm.eformation.core.entity.Client;
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
@@ -19,7 +13,7 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 /**
- *
+ * Class receiving a JMS message using a point to point communication 
  * @author java
  */
 public class SessionRegJmsReceiver {
@@ -32,7 +26,9 @@ public class SessionRegJmsReceiver {
 
     public SessionRegJmsReceiver() {
     }
-
+    /**
+     * receive a JMS message and print it into console
+     */
     public void listenMessage() {
         try {
             factory = new ActiveMQConnectionFactory(ActiveMQConnection.DEFAULT_BROKER_URL

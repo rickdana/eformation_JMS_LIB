@@ -1,6 +1,5 @@
 package fr.utbm.eformation.jms.sender;
 
-import fr.utbm.eformation.core.entity.Client;
 import fr.utbm.eformation.jms.interfaces.SessionRegJmsSendable;
 import java.io.Serializable;
 import javax.jms.Connection;
@@ -14,7 +13,7 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 /**
- *
+ * Class sending a JMS msg using a point to point communication 
  * @author java
  */
 public class JmsSender implements SessionRegJmsSendable <Serializable>{
